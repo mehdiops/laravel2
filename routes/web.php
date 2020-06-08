@@ -15,6 +15,10 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
+Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']], function () {
+    \UniSharp\LaravelFilemanager\Lfm::routes();
+});
+
 
 Route::group(['prefix' => 'admin'], function () {
 Route::get('', 'back\AdminController@index')->name('admin.index');
@@ -57,6 +61,10 @@ Route::post('/update/{user}', 'UserController@update')->name('profileupdate');
 
 
 Route::post('/admin/user', 'UserController@update')->name('profileupdate');
+Route::get('/articles', 'front\ArticleController@index')->name('articles');
+Route::get('/article/{article}', 'front\ArticleController@show')->name('article');
+
+Route::post('/comment/{article}', 'front\CommentController@store')->name('comment.store');
 
 
 
