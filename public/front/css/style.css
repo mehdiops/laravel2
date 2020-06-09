@@ -8,11 +8,27 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+@font-face {
+    font-family: 'p30';
+    font-style: bold;
+    font-weight: 700;
+    src: url(fonts/p30.eot);
+    src: url(fonts/p30.eot?#iefix) format('embedded-opentype'),
+    url(fonts/p30.woff2) format('woff2'),
+    url(fonts/p30.woff) format('woff'),
+    url(fonts/p30.ttf) format('truetype');
+}
+
+
+div , p , li ,h1,h2,h3,h4,h5,h6{
+    font-family: 'p30' !important;
+}
+
 .bgcolor{background:#f5f8fd !important}
 body {
   background: #fff;
   color: #444;
-  font-family: "Open Sans", sans-serif;
+  font-family: "p30", sans-serif;
 }
 
 a {

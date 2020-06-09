@@ -48,6 +48,17 @@ Route::prefix('admin/articles')->group(function () {
     Route::get('/status/{article}', 'back\ArticleController@updatestatus')->name('admin.articles.status');
 });
 
+
+Route::prefix('admin/comments')->group(function () {
+    Route::get('/', 'back\CommentController@index')->name('admin.comments');
+    Route::get('/edit/{comment}', 'back\CommentController@edit')->name('admin.comments.edit');
+    Route::post('/update/{comment}', 'back\CommentController@update')->name('admin.comments.update');
+    Route::get('/destroy/{comment}', 'back\CommentController@destroy')->name('admin.comments.destroy');
+    Route::get('/status/{comment}', 'back\CommentController@updatestatus')->name('admin.comments.status');
+});
+
+
+
 Route::get('/', function () { return view('front.main');})->name('home');
 
 

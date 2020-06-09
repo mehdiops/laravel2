@@ -26,7 +26,7 @@
         <div>
           <ul>
             <li>نویسنده:{{$article->user->name}}</li>
-            <li>تاریخ: {!! $article->created_at->format('%d-%m-%Y') !!}</li>
+            <li>تاریخ: {!! jdate($article->created_at)->format('%d-%m-%Y') !!}</li>
             <li>بازدید: {{$article->hit}}</li>
           </ul>
 

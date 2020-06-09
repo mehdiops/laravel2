@@ -25,7 +25,8 @@ class ArticleController extends Controller
 
     public function show(Article $article)
     {
-        $article->increment('hit');
+        $article->increment('hit',1);
+        //$article->increment('hit',5,['name'=>'تغییر این فیلد زمانی که بازدید خورده میشه در مطلب']);
         $comments = $article->comments()->where('status', 1)->get();
         return view('front.article', compact('article', 'comments'));
     }

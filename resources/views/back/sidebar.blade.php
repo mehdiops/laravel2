@@ -37,7 +37,7 @@
                         <a class="nav-link" href="{{route('admin.articles')}}">مطالب</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="">نظرات</a>
+                        <a class="nav-link" href="{{route('admin.comments')}}">مدیریت نظرات</a>
                     </li>
                 </ul>
             </div>
