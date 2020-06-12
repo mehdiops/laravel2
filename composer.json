@@ -1,6 +1,6 @@
 {
-    "name": "laravel/laravel",
-    "type": "project",
+    "name": "laravel/blog_test_personal",
+    "type": "blog_test",
     "description": "The Laravel Framework.",
     "keywords": [
         "framework",
